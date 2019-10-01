@@ -40,7 +40,7 @@ In order to connect new devices to your EdgeX instance you will need to use a De
 
 The EdgeX Foundry provides reference device services for a number of common IoT and smart device protocols, including MQTT, Modbus and plain HTTP, and you can use those pre-written services if your device supports those protocols. But if you need something more, the EdgeX Foundry Device SDKs make it easy for you to build a new device service capable of supporting your device.
 
-Using either the Go or C SDKs, you can bootstrap a new Device Service that will already handle all of the setup and configuration for your new service, including uploading your Device Profiles into EdgeX core-metadata, provisioning any devices you have pre-defined, and scheduling automatic readings from your devices. The SDK also provides functions for calling all the common EdgeX APIs in a language-friendly way. All you have to do is add your device-specific connection and control code.
+Using either the [Go or C SDKs](https://docs.edgexfoundry.org/Ch-GettingStartedSDK.html), you can bootstrap a new Device Service that will already handle all of the setup and configuration for your new service, including uploading your Device Profiles into EdgeX core-metadata, provisioning any devices you have pre-defined, and scheduling automatic readings from your devices. The SDK also provides functions for calling all the common EdgeX APIs in a language-friendly way. All you have to do is add your device-specific connection and control code.
 
 `Training Tip:` You can do end-to-end testing of your new Device Service by connecting your local EdgeX deployment up to a cloud service or NodeRed instance, and watch the readings flow in and commands go out.
 
