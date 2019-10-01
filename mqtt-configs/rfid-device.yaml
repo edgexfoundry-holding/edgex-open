@@ -1,0 +1,39 @@
+name: "device-rfid"
+manufacturer: "Intel"
+model: "RFID"
+labels:
+  - "rfid"
+description: "RFID Device Profile"
+deviceResources:
+  - name: heartbeat
+    description: "JSON message containing the heartbeat details"
+    properties:
+      value:
+        { type: "String", size: "0", readWrite: "W" ,scale: "", offset: "", base: ""  }
+      units:
+        { type: "String", readWrite: "R", defaultValue: "" }
+  - name: alert
+    description: "JSON message containing the alerts details"
+    properties:
+      value:
+        { type: "String", size: "0", readWrite: "W" ,scale: "", offset: "", base: ""  }
+      units:
+        { type: "String", readWrite: "R", defaultValue: "" }
+  - name: events
+    description: "JSON message containing the events details"
+    properties:
+      value:
+        { type: "String", size: "0", readWrite: "W" ,scale: "", offset: "", base: ""  }
+      units:
+        { type: "String", readWrite: "R", defaultValue: "" }
+
+deviceCommands:
+  - name: heartbeat
+    get:
+      - { operation: "get", object: "heartbeat", parameter: "heartbeat" }
+  - name: alerts
+    get:
+      - { operation: "get", object: "alerts", parameter: "alerts" }
+  - name: events
+    get:
+      - { operation: "get", object: "events", parameter: "events" }

@@ -1,0 +1,63 @@
+name: "device-pos"
+manufacturer: "Intel"
+model: "3rd Party POS"
+labels:
+- "test"
+description: "POS Device Profile"
+deviceResources:
+- name: basketopen
+  description: "JSON message containing the basketopen details"
+  properties:
+    value:
+      { type: "String", size: "0", readWrite: "W" ,scale: "", offset: "", base: ""  }
+    units:
+      { type: "String", readWrite: "R", defaultValue: "" }
+
+- name: positem
+  description: "JSON message containing the positem details"
+  properties:
+    value:
+      { type: "String", size: "0", readWrite: "W" ,scale: "", offset: "", base: ""  }
+    units:
+      { type: "String", readWrite: "R", defaultValue: "" }
+
+- name: paymentstart
+  description: "JSON message containing the paymentstart details"
+  properties:
+    value:
+      { type: "String", size: "0", readWrite: "W" ,scale: "", offset: "", base: ""  }
+    units:
+      { type: "String", readWrite: "R", defaultValue: "" }
+
+- name: paymentsuccess
+  description: "JSON message containing the paymentsuccess details"
+  properties:
+    value:
+      { type: "String", size: "0", readWrite: "W" ,scale: "", offset: "", base: ""  }
+    units:
+      { type: "String", readWrite: "R", defaultValue: "" }
+
+- name: basketclose
+  description: "JSON message containing the basketclose details"
+  properties:
+    value:
+      { type: "String", size: "0", readWrite: "W" ,scale: "", offset: "", base: ""  }
+    units:
+      { type: "String", readWrite: "R", defaultValue: "" }
+
+deviceCommands:
+- name: basketopen
+  get:
+    - { operation: "get", object: "basketopen", parameter: "basketopen" }
+- name: positem
+  get:
+    - { operation: "get", object: "positem", parameter: "positem" }
+- name: paymentstart
+  get:
+    - { operation: "get", object: "paymentstart", parameter: "paymentstart" }
+- name: paymentsuccess
+  get:
+    - { operation: "get", object: "paymentsuccess", parameter: "paymentsuccess" }
+- name: basketclose
+  get:
+    - { operation: "get", object: "basketclose", parameter: "basketclose" }
