@@ -18,13 +18,18 @@ If you provide custom deployments, EdgeX gives you an ecosystem of plug-and-play
 ## Running EdgeX in a development environment
 `Training Tip:` Installation of EdgeX can be completed using Snaps or Docker.
 
+`Training Tip:` EdgeX can use Redis or Mongo for persistence.
+
 You can build the EdgeX Foundry services using the open source code on Github, but more often than now you just need to get these services running so that you can connect your own services to them. To support that, the project publishes Docker images based on the latest stable release of the open source code, as well as docker-compose.yml files that will run all the necessary services together on your development machine.
 
 1. Install Docker and Docker Compose
-2. Download the latest stable [docker-compose.yml](https://github.com/edgexfoundry/developer-scripts/raw/master/releases/edinburgh/compose-files/docker-compose-edinburgh-1.0.1.yml) file
-3. Run `docker-compose up -d`
-4. Verify that the services are all working with `docker-compose ps`
-5. Test the APIs with http://localhost:48080/api/v1/ping
+1. Download the latest stable Docker Compose file
+   * Using Redis [docker-compose.yml](https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/edinburgh/compose-files/docker-compose-redis-edinburgh-no-secty-1.0.1.yml)
+   * Or using Mongo [docker-compose.yml](https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/edinburgh/compose-files/docker-compose-edinburgh-1.0.1.yml)
+
+1. Run `docker-compose up -d`
+1. Verify that the services are all working with `docker-compose ps`
+1. Test the APIs with http://localhost:48080/api/v1/ping
 
 Once you have the EdgeX services running, you can take our [Quick Start guide](https://docs.edgexfoundry.org/Ch-QuickStart.html), or more in-depth [API Walkthrough](https://docs.edgexfoundry.org/Ch-Walkthrough.html) to get a feel for how EdgeX services work together.
 
