@@ -1,0 +1,43 @@
+name: "device-roi"
+manufacturer: "Intel"
+model: "CV ROI enter exit events"
+labels:
+  - "cv"
+  - "roi"
+  - "enter"
+  - "exit"
+description: "A device for CV region of interest (ROI) enter & exit events"
+
+deviceResources:
+  - name: "roi-exit"
+    description: "A cv ROI exit event"
+    properties:
+      value:
+        { type: "String", readWrite: "RW", defaultValue: "" }
+      units:
+        { type: "String", readWrite: "RW", defaultValue: "" }
+  - name: "roi-enter"
+    description: "A cv ROI enter event"
+    properties:
+      value:
+        { type: "String", readWrite: "RW", defaultValue: "" }
+      units:
+        { type: "String", readWrite: "RW", defaultValue: "" }
+  - name: "roi-count"
+    description: "A cv ROI object count event"
+    properties:
+      value:
+        { type: "String", readWrite: "RW", defaultValue: "" }
+      units:
+        { type: "String", readWrite: "RW", defaultValue: "" }
+
+deviceCommands:
+  - name: "roi-exit"
+    get:
+      - { operation: "get", object: "roi-exit", property: "value", parameter: "roi-exit" }
+  - name: "roi-enter"
+    get:
+      - { operation: "get", object: "roi-enter", property: "value", parameter: "roi-enter" }
+  - name: "roi-count"
+    get:
+      - { operation: "get", object: "roi-count", property: "value", parameter: "roi-count" }
