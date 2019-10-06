@@ -6,7 +6,7 @@
 
 ## [Device MQTT Setup](./mqtt-configs/README.md)
 
-## Developer Setup and Training Resources
+## [Developer Setup and Training Resources](./developer.md)
 
 ## Scripts
 
