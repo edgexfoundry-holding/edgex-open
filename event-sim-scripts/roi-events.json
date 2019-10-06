@@ -1,0 +1,16 @@
+{
+    "loop_enabled": false,
+    "loop_interval": "5s",
+    "edgex_events": [
+        {
+            "name": "device-roi",
+            "command": "roi-event",
+            "data": {
+                "basket_id": "abc-012345-def",
+                "customer_id": "joe5",
+                "employee_id": "mary1"
+            },
+            "wait_time": "1s"
+        }
+    ]
+}

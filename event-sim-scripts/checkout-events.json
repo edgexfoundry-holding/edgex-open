@@ -1,0 +1,66 @@
+{
+    "loop_enabled": true,
+    "loop_interval": "5s",
+    "edgex_events": [
+        {
+            "name": "device-pos",
+            "command": "basketopen",
+            "data": {
+                "basket_id": "abc-012345-def",
+                "customer_id": "joe5",
+                "employee_id": "mary1"
+            },
+            "wait_time": "1s"
+        },
+        {
+            "name": "device-pos",
+            "command": "positem",
+            "data": {
+                "basket_id": "abc-012345-def",
+                "product_id": "00000000324588",
+                "product_id_type": "UPC",
+                "product_name": "Red Apples",
+                "quantity": 1.0,
+                "quantity_unit": "EA",
+                "unit_price": 0.99,
+                "customer_id": "joe5",
+                "employee_id": "mary1"
+            },
+            "wait_time": "2s"
+        },
+        {
+            "name": "device-scale",
+            "command": "scaleitem",
+            "data": {
+                "total": 1,
+                "units": "lbs"
+            },
+            "wait_time": "1s"
+        },
+        {
+            "name": "device-pos",
+            "command": "positem",
+            "data": {
+                "basket_id": "abc-012345-def",
+                "product_id": "00000000830881",
+                "product_id_type": "UPC",
+                "product_name": "Salsa",
+                "quantity": 1.0,
+                "quantity_unit": "EA",
+                "unit_price": 3.00,
+                "customer_id": "joe5",
+                "employee_id": "mary1"
+            },
+            "wait_time": "2s"
+        },
+        {
+            "name": "device-scale",
+            "command": "scaleitem",
+            "data": {
+                "total": 2.3,
+                "units": "lbs"
+            },
+            "wait_time": "1s"
+        }
+    ]
+}
