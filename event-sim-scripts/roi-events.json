@@ -6,9 +6,32 @@
             "name": "device-roi",
             "command": "roi-event",
             "data": {
-                "basket_id": "abc-012345-def",
-                "customer_id": "joe5",
-                "employee_id": "mary1"
+                "object_count": 1,
+                "object_id": "abcde11",
+                "roi_action": "ENTER",
+                "roi_name": "Staging"
+            },
+            "wait_time": "1s"
+        },
+        {
+            "name": "device-roi",
+            "command": "roi-event",
+            "data": {
+                "object_count": 1,
+                "object_id": "abcde11",
+                "roi_action": "DEPART",
+                "roi_name": "Staging"
+            },
+            "wait_time": "1s"
+        },
+        {
+            "name": "device-roi",
+            "command": "roi-event",
+            "data": {
+                "object_count": 1,
+                "object_id": "abcde11",
+                "roi_action": "ENTER",
+                "roi_name": "Bagging"
             },
             "wait_time": "1s"
         }
