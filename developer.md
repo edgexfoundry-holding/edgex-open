@@ -35,3 +35,14 @@ https://github.com/lenny-intel/device-rest-go
 
 See https://github.com/lenny-intel/device-rest-go/blob/initial/README.md for details on usage.
 
+### RFID Card Readers
+
+Two RFID Card readers and card sets are available for teams to use. This will required creating a USB Device Service to communicate with the card reader, which are HID devices. The USB VID/PID for these readers is:
+
+* VID = 0xffff 
+* PID = 0x35
+* VendorName = "Sycreader USB Reader"
+
+The [github.com/gvalkov/golang-evdev](https://github.com/gvalkov/golang-evdev) go package can be used to read the data from these card readers.
+
+> *Note: Each character from the card is read one at a time, rather than as one complete string.*
