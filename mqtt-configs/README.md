@@ -8,16 +8,28 @@ This folder contains the MQTT `device profiles` for the simulated and real `sens
   * paymentstart (simulated)
   * paymentsuccess (simulated)
   * basketclose (simulated)
+  
+  Refer to [checkout-events.json](../event-sim-scripts/checkout-events.json) for sample of scale-pos JSON objects 
+  
 * scale-device (Weight scale events)
+  
   * scaleitem (simulated)
+  
+  Refer to [checkout-events.json](../event-sim-scripts/checkout-events.json) for sample of scale-device JSON objects 
+  
 * rfid-device (RFID events)
   * heartbeat (not simulated)
   * alert (not simulated)
   * events (simulated)
+  
+  Refer to [rfid-events.json](../event-sim-scripts/rfid-events.json) for sample of rfid-device JSON objects 
+  
 * roi-device (CV Region of Interest events)
   * roi-enter (real data)
   * roi-exit (real data)
   * roi-count (real data)
+  
+  Refer to [roi-events.json](../event-sim-scripts/roi-events.json) for sample of roi-device JSON objects 
 
 ###  Configuring MQTT Device Service
 
